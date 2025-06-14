@@ -1,18 +1,18 @@
-package de.grimsi.gameyfinplugins.igdb
+package org.gameyfin.plugins.metadata.igdb
 
 import com.api.igdb.apicalypse.APICalypse
 import com.api.igdb.exceptions.RequestException
 import com.api.igdb.request.IGDBWrapper
 import com.api.igdb.request.TwitchAuthenticator
 import com.api.igdb.request.games
-import de.grimsi.gameyfin.pluginapi.core.config.ConfigMetadata
-import de.grimsi.gameyfin.pluginapi.core.config.PluginConfigError
-import de.grimsi.gameyfin.pluginapi.core.config.PluginConfigMetadata
-import de.grimsi.gameyfin.pluginapi.core.config.PluginConfigValidationResult
-import de.grimsi.gameyfin.pluginapi.core.wrapper.ConfigurableGameyfinPlugin
-import de.grimsi.gameyfin.pluginapi.gamemetadata.GameMetadata
-import de.grimsi.gameyfin.pluginapi.gamemetadata.GameMetadataProvider
 import me.xdrop.fuzzywuzzy.FuzzySearch
+import org.gameyfin.pluginapi.core.config.ConfigMetadata
+import org.gameyfin.pluginapi.core.config.PluginConfigError
+import org.gameyfin.pluginapi.core.config.PluginConfigMetadata
+import org.gameyfin.pluginapi.core.config.PluginConfigValidationResult
+import org.gameyfin.pluginapi.core.wrapper.ConfigurableGameyfinPlugin
+import org.gameyfin.pluginapi.gamemetadata.GameMetadata
+import org.gameyfin.pluginapi.gamemetadata.GameMetadataProvider
 import org.pf4j.Extension
 import org.pf4j.PluginWrapper
 import org.slf4j.LoggerFactory

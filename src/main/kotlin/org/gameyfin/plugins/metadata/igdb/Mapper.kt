@@ -1,13 +1,17 @@
-package de.grimsi.gameyfinplugins.igdb
+package org.gameyfin.plugins.metadata.igdb
 
 import com.api.igdb.utils.ImageSize
 import com.api.igdb.utils.ImageType
 import com.api.igdb.utils.imageBuilder
-import de.grimsi.gameyfin.pluginapi.gamemetadata.GameFeature
-import de.grimsi.gameyfin.pluginapi.gamemetadata.Genre
-import de.grimsi.gameyfin.pluginapi.gamemetadata.PlayerPerspective
-import de.grimsi.gameyfin.pluginapi.gamemetadata.Theme
+import org.gameyfin.pluginapi.gamemetadata.GameFeature
+import org.gameyfin.pluginapi.gamemetadata.Genre
+import org.gameyfin.pluginapi.gamemetadata.PlayerPerspective
+import org.gameyfin.pluginapi.gamemetadata.Theme
 import org.slf4j.LoggerFactory
+import proto.Cover
+import proto.Game
+import proto.GameVideo
+import proto.Screenshot
 import java.net.URI
 
 class Mapper {
@@ -95,20 +99,20 @@ class Mapper {
             }
         }
 
-        fun screenshot(screenshot: proto.Screenshot): URI {
+        fun screenshot(screenshot: Screenshot): URI {
             return URI(imageBuilder(screenshot.imageId, ImageSize.FHD, ImageType.PNG))
         }
 
-        fun cover(cover: proto.Cover): URI? {
+        fun cover(cover: Cover): URI? {
             if (cover.imageId.isEmpty()) return null
             return URI(imageBuilder(cover.imageId, ImageSize.COVER_BIG, ImageType.PNG))
         }
 
-        fun video(video: proto.GameVideo): URI {
+        fun video(video: GameVideo): URI {
             return URI("https://www.youtube.com/watch?v=${video.videoId}")
         }
 
-        fun gameFeatures(game: proto.Game): Set<GameFeature> {
+        fun gameFeatures(game: Game): Set<GameFeature> {
             val gameFeatures = mutableSetOf<GameFeature>()
 
             // Get LAN support from multiplayer modes
