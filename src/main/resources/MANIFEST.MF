@@ -1,4 +1,4 @@
-Plugin-Version: 1.2.0
+Plugin-Version: 1.2.1
 Plugin-Class: org.gameyfin.plugins.metadata.igdb.IgdbPlugin
 Plugin-Id: org.gameyfin.plugins.metadata.igdb
 Plugin-Name: IGDB Metadata
@@ -7,4 +7,5 @@ Plugin-Description: Fetches metadata from IGDB.<br>
  Details see in the [IGDB API docs](https://api-docs.igdb.com/#account-creation).
 Plugin-Author: grimsi
 Plugin-License: MIT
-Plugin-Url: https://github.com/gameyfin
+Plugin-Url: https://github.com/gameyfin/plugin-igdb-metadata
+Plugin-Requires: >=2.7.0
